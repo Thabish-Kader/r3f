@@ -8,6 +8,7 @@ import { Camera } from "./components/Camera";
 import { ShowPiece } from "./components/ShowPiece";
 import { Pyramid } from "./components/Pyramid";
 import { Dog } from "./components/Dog";
+import { Loading } from "./components/Loading";
 
 function App() {
 	return (
@@ -21,7 +22,7 @@ function App() {
 					azimuth={[-Math.PI / 4, Math.PI / 4]}
 				>
 					<group position-y={-0.75}>
-						<Suspense>
+						<Suspense fallback={<Loading />}>
 							<Level />
 							<Cactus />
 							<Camera />
@@ -32,7 +33,7 @@ function App() {
 					</group>
 				</PresentationControls>
 			</Canvas>
-			<Loader />
+			{/* <Loader /> */}
 		</div>
 	);
 }
