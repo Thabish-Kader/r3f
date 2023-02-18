@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import { OrbitControls, PresentationControls } from "@react-three/drei";
+import { Loader, OrbitControls, PresentationControls } from "@react-three/drei";
 import { Level } from "./components/Level";
 import { Cactus } from "./components/Cactus";
 import { Camera } from "./components/Camera";
@@ -21,15 +21,18 @@ function App() {
 					azimuth={[-Math.PI / 4, Math.PI / 4]}
 				>
 					<group position-y={-0.75}>
-						<Level />
-						<Cactus />
-						<Camera />
-						<ShowPiece />
-						<Pyramid />
-						<Dog />
+						<Suspense>
+							<Level />
+							<Cactus />
+							<Camera />
+							<ShowPiece />
+							<Pyramid />
+							<Dog />
+						</Suspense>
 					</group>
 				</PresentationControls>
 			</Canvas>
+			<Loader />
 		</div>
 	);
 }
