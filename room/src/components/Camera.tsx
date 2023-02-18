@@ -1,11 +1,10 @@
 import { useGLTF } from "@react-three/drei";
 import { GLTFResult } from "../typings";
-import { useControls } from "leva";
+// import { useControls } from "leva";
 import { useSpring, a, config } from "@react-spring/three";
 import { useEffect, useState } from "react";
 
 export const Camera = () => {
-	const [active, setActive] = useState(false);
 	const { nodes, materials } = useGLTF("./room.glb") as GLTFResult;
 	const [spring, api] = useSpring(
 		() => ({ "rotation-z": 0, config: { friction: 40 } }),
@@ -42,6 +41,7 @@ export const Camera = () => {
 		<a.group
 			position={[-0.58, 0.83, -0.03]}
 			rotation={[Math.PI / 2, 0, 0.47]}
+			{...spring}
 		>
 			<mesh
 				geometry={nodes.Camera.geometry}

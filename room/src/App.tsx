@@ -5,6 +5,8 @@ import { OrbitControls } from "@react-three/drei";
 import { Level } from "./components/Level";
 import { Cactus } from "./components/Cactus";
 import { Camera } from "./components/Camera";
+import { ShowPiece } from "./components/ShowPiece";
+import { Pyramid } from "./components/Pyramid";
 
 function App() {
 	return (
@@ -15,6 +17,8 @@ function App() {
 				<Level />
 				<Cactus />
 				<Camera />
+				<ShowPiece />
+				<Pyramid />
 			</Canvas>
 		</div>
 	);
