@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import * as THREE from "three";
 
 export const Dog = () => {
-	const { nodes } = useGLTF("./room.glb") as GLTFResult;
+	const { nodes } = useGLTF("../../public/room.glb") as GLTFResult;
 	const [spring, api] = useSpring(
 		() => ({ rotation: [Math.PI / 2, 0, 0.29], config: { friction: 40 } }),
 		[]

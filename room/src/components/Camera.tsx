@@ -5,7 +5,7 @@ import { useSpring, a, config } from "@react-spring/three";
 import { useEffect, useState } from "react";
 
 export const Camera = () => {
-	const { nodes, materials } = useGLTF("/room.glb") as GLTFResult;
+	const { nodes, materials } = useGLTF("../../public/room.glb") as GLTFResult;
 	const [spring, api] = useSpring(
 		() => ({ "rotation-z": 0, config: { friction: 40 } }),
 		[]
