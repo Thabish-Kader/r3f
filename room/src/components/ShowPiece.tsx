@@ -21,7 +21,7 @@ export const ShowPiece = () => {
 				position: [-0.79, floating ? 1.4 : 1.3, 0.62],
 			});
 			floating = !floating;
-			timeout = setTimeout(bounce, 1.5 * 1000);
+			timeout = window.setTimeout(bounce, 1.5 * 1000);
 		};
 		bounce();
 		return () => clearTimeout(timeout);

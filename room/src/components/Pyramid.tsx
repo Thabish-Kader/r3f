@@ -22,7 +22,7 @@ export const Pyramid = () => {
 				rotation: [Math.random() * Math.PI, 0, Math.random() * Math.PI],
 			});
 
-			timeout = setTimeout(animate, 1.5 * 1000);
+			timeout = window.setTimeout(animate, 1.5 * 1000);
 		};
 		animate();
 		return () => clearTimeout(timeout);
