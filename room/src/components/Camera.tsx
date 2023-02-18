@@ -15,10 +15,10 @@ export const Camera = () => {
 		let timeout = 0;
 		const wander = () => {
 			api.start({ "rotation-z": Math.random() });
-			timeout = setTimeout(wander, (1 + Math.random() * 5) * 1000);
+			timeout = window.setTimeout(wander, (1 + Math.random() * 5) * 1000);
 		};
 		wander();
-		return () => clearTimeout(timeout);
+		return () => window.clearTimeout(timeout);
 	}, []);
 
 	// debug
@@ -31,10 +31,6 @@ export const Camera = () => {
 	// 		value: { x: 1.6, y: 0.06, z: 1.06 },
 	// 		step: 0.01,
 	// 	},
-	// });
-	// const { scale } = useSpring({
-	// 	scale: active ? 1.5 : 1,
-	// 	config: config.wobbly,
 	// });
 
 	return (

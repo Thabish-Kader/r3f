@@ -11,7 +11,7 @@ export type GLTFResult = GLTF & {
 		React: THREE.Mesh;
 		Scene: THREE.Mesh;
 		Sudo: THREE.Mesh;
-		SudHead: THREE.Mesh;
+		SudoHead: THREE.Mesh;
 	};
 	materials: {
 		Cactus: THREE.MeshStandardMaterial;

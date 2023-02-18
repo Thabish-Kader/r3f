@@ -1,24 +1,34 @@
 import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, PresentationControls } from "@react-three/drei";
 import { Level } from "./components/Level";
 import { Cactus } from "./components/Cactus";
 import { Camera } from "./components/Camera";
 import { ShowPiece } from "./components/ShowPiece";
 import { Pyramid } from "./components/Pyramid";
+import { Dog } from "./components/Dog";
 
 function App() {
 	return (
 		<div className="App">
-			<Canvas>
-				<color args={["#030202"]} attach="background" />
-				<OrbitControls />
-				<Level />
-				<Cactus />
-				<Camera />
-				<ShowPiece />
-				<Pyramid />
+			<Canvas flat dpr={[1, 2]} camera={{ fov: 75, position: [2, 1, 3] }}>
+				<color attach="background" args={["#e0b7ff"]} />
+				<PresentationControls
+					snap={true}
+					rotation={[0, 0, 0]}
+					polar={[0, Math.PI * 0.125]}
+					azimuth={[-Math.PI / 4, Math.PI / 4]}
+				>
+					<group position-y={-0.75}>
+						<Level />
+						<Cactus />
+						<Camera />
+						<ShowPiece />
+						<Pyramid />
+						<Dog />
+					</group>
+				</PresentationControls>
 			</Canvas>
 		</div>
 	);

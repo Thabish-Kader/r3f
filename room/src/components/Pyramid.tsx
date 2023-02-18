@@ -31,7 +31,6 @@ export const Pyramid = () => {
 		<a.mesh
 			geometry={nodes.Pyramid.geometry}
 			position={[-0.76, 1.3, 0.15]}
-			// rotation={[1.59, -0.0, 1.12]}
 			{...(springs as any)}
 		>
 			<meshMatcapMaterial map={matcap} />

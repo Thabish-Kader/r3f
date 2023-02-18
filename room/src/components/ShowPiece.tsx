@@ -1,6 +1,6 @@
 import { useGLTF, useMatcapTexture } from "@react-three/drei";
 import { GLTFResult } from "../typings";
-import { useControls } from "leva";
+
 import { a, useSpring } from "@react-spring/three";
 import { useEffect } from "react";
 
