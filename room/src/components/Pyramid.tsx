@@ -5,7 +5,7 @@ import { a, useSpring } from "@react-spring/three";
 import { useEffect } from "react";
 
 export const Pyramid = () => {
-	const { nodes } = useGLTF("../../public/room.glb") as GLTFResult;
+	const { nodes } = useGLTF("/room.glb") as GLTFResult;
 	const [matcap] = useMatcapTexture("489B7A_A0E7D9_6DC5AC_87DAC7", 1024);
 	// animation
 	const [springs, api] = useSpring(() => ({

@@ -4,7 +4,7 @@ import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 import { GLTFResult } from "../typings";
 
 export const Level = () => {
-	const { nodes, materials } = useGLTF("../../public/room.glb") as GLTFResult;
+	const { nodes, materials } = useGLTF("/room.glb") as GLTFResult;
 
 	return (
 		<mesh

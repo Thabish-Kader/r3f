@@ -2,7 +2,7 @@ import { useGLTF } from "@react-three/drei";
 import { GLTFResult } from "../typings";
 
 export const Cactus = () => {
-	const { nodes, materials } = useGLTF("../../public/room.glb") as GLTFResult;
+	const { nodes, materials } = useGLTF("/room.glb") as GLTFResult;
 
 	return (
 		<mesh

@@ -5,7 +5,7 @@ import { a, useSpring } from "@react-spring/three";
 import { useEffect } from "react";
 
 export const ShowPiece = () => {
-	const { nodes } = useGLTF("../../public/room.glb") as GLTFResult;
+	const { nodes } = useGLTF("/room.glb") as GLTFResult;
 	const [matcap] = useMatcapTexture("65A0C7_C3E4F8_A7D5EF_97CAE9", 1024);
 	const [springs, api] = useSpring(() => ({
 		rotation: [0.8, 1.1, -0.4],
