@@ -27,4 +27,7 @@ export type GLTFAstraunaut = GLTF & {
 	nodes: {
 		Astronaut_mesh: THREE.Mesh;
 	};
+	materials: {
+		Astronaut_mat: THREE.MeshStandardMaterial;
+	};
 };
