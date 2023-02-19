@@ -1,10 +1,21 @@
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, useGLTF } from "@react-three/drei";
+import {
+	Environment,
+	OrbitControls,
+	QuadraticBezierLine,
+	useGLTF,
+} from "@react-three/drei";
 import { GLTFSpaceship } from "../typings";
 import { Spaceship } from "./Spaceship";
 import { Astraunaut } from "./Astraunaut";
+import { useRef } from "react";
+import * as THREE from "three";
+import { Cable } from "./Cable";
 
 export const MyCanvas = () => {
+	const spaceshipRef = useRef<THREE.Group>(null!);
+	const astraunautRef = useRef<THREE.Mesh>(null!);
+	console.log(spaceshipRef.current);
 	return (
 		<Canvas>
 			<color args={["black"]} attach="background" />
@@ -12,8 +23,10 @@ export const MyCanvas = () => {
 			<OrbitControls />
 			<ambientLight />
 			<pointLight position={[1, 2, 3]} intensity={10} />
-			<Spaceship />
-			<Astraunaut />
+			<Spaceship ref={spaceshipRef} />
+			<Astraunaut ref={astraunautRef} />
+			{/* TODO: Pass the refs to cable and attach the wire */}
+			<Cable />
 		</Canvas>
 	);
 };

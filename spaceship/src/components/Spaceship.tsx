@@ -1,10 +1,10 @@
 import { useGLTF } from "@react-three/drei";
 import { GLTFSpaceship } from "../typings";
-import { useLayoutEffect, useRef } from "react";
+import { forwardRef, useLayoutEffect, useRef } from "react";
 import * as THREE from "three";
+import { ThreeElements } from "@react-three/fiber";
 
-export const Spaceship = () => {
-	const bodyRef = useRef<THREE.Mesh>(null!);
+export const Spaceship = forwardRef<THREE.Group>((props, ref) => {
 	const { nodes, materials } = useGLTF(
 		"./models/spaceship.gltf"
 	) as GLTFSpaceship;
@@ -15,7 +15,7 @@ export const Spaceship = () => {
 		);
 	});
 	return (
-		<group>
+		<group ref={ref}>
 			<mesh geometry={nodes.Cube005.geometry} />
 			<mesh
 				geometry={nodes.Cube005_1.geometry}
@@ -40,4 +40,4 @@ export const Spaceship = () => {
 			/>
 		</group>
 	);
-};
+});

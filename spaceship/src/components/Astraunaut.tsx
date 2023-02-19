@@ -1,9 +1,9 @@
 import { useGLTF, Float } from "@react-three/drei";
 
 import { GLTFAstraunaut } from "../typings";
-import { useLayoutEffect } from "react";
+import { forwardRef, useLayoutEffect } from "react";
 
-export const Astraunaut = () => {
+export const Astraunaut = forwardRef<THREE.Mesh>((props, ref) => {
 	const { nodes, materials } = useGLTF(
 		"./models/astraunaut.glb"
 	) as GLTFAstraunaut;
@@ -16,6 +16,7 @@ export const Astraunaut = () => {
 		<>
 			<Float>
 				<mesh
+					ref={ref}
 					geometry={nodes.Astronaut_mesh.geometry}
 					material={materials.Astronaut_mat}
 					scale={0.25}
@@ -25,4 +26,4 @@ export const Astraunaut = () => {
 			</Float>
 		</>
 	);
-};
+});
