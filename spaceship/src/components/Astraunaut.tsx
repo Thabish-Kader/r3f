@@ -14,7 +14,7 @@ export const Astraunaut = forwardRef<THREE.Mesh>((props, ref) => {
 	}, []);
 	return (
 		<>
-			<Float>
+			<Float speed={3} rotationIntensity={2} floatIntensity={1}>
 				<mesh
 					ref={ref}
 					geometry={nodes.Astronaut_mesh.geometry}

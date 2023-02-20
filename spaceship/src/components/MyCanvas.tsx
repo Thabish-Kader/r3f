@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import {
 	Environment,
+	Float,
 	OrbitControls,
 	QuadraticBezierLine,
 	useGLTF,
@@ -23,7 +24,9 @@ export const MyCanvas = () => {
 			<OrbitControls />
 			<ambientLight />
 			<pointLight position={[1, 2, 3]} intensity={10} />
-			<Spaceship ref={spaceshipRef} />
+			<Float>
+				<Spaceship ref={spaceshipRef} />
+			</Float>
 			<Astraunaut ref={astraunautRef} />
 
 			{/* <Cable start={spaceshipRef} end={astraunautRef} /> */}
