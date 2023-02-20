@@ -16,13 +16,6 @@ export function Cable({
 	v2 = new THREE.Vector3(),
 }: Props) {
 	const ref = useRef<any>(null!);
-	useFrame(
-		() =>
-			ref.current.setPoints(
-				start.current.getWorldPosition(v1),
-				end.current.getWorldPosition(v2)
-			),
-		[]
-	);
-	return <QuadraticBezierLine ref={ref} lineWidth={3} color="#ff2060" />;
+
+	return null;
 }
