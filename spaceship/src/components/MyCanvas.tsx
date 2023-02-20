@@ -26,7 +26,7 @@ export const MyCanvas = () => {
 			<Spaceship ref={spaceshipRef} />
 			<Astraunaut ref={astraunautRef} />
 
-			<Cable start={spaceshipRef} end={astraunautRef} />
+			{/* <Cable start={spaceshipRef} end={astraunautRef} /> */}
 		</Canvas>
 	);
 };
