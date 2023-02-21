@@ -24,7 +24,7 @@ export function Cable({
 			astraunautRef.current.getWorldPosition(v2)
 		)
 	);
-	console.log(ref);
+
 	return (
 		<QuadraticBezierLine
 			ref={ref}
