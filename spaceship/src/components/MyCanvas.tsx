@@ -18,14 +18,11 @@ type Props = {
 	cameraRef: React.MutableRefObject<CameraControls | null>;
 };
 
-const position = { x: -3.8799999999999972, y: 2, z: 3 };
-const target = { x: 1, y: 1, z: 0 };
-
 export const MyCanvas = ({ cameraRef }: Props) => {
 	const spaceshipRef = useRef<THREE.Group>(null!);
 	const astraunautRef = useRef<THREE.Mesh>(null!);
+	// debug
 	// const cameraControlsRef = useRef<CameraControls | null>(null);
-
 	// const { vec4 } = useControls({
 	// 	setLookAt: folder({
 	// 		vec4: { value: [1, 2, 3], label: "position" },

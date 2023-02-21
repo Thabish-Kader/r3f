@@ -17,7 +17,10 @@ export const Spaceship = forwardRef<THREE.Group>((props, ref) => {
 	return (
 		<group ref={ref}>
 			<Float>
-				<mesh geometry={nodes.Cube005.geometry} />
+				<mesh
+					geometry={nodes.Cube005.geometry}
+					material={materials.Mat0}
+				/>
 				<mesh
 					geometry={nodes.Cube005_1.geometry}
 					material={materials.Mat0}
