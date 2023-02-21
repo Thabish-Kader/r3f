@@ -5,10 +5,11 @@ import {
 	OrbitControls,
 	CameraControls,
 	Stars,
+	Loader,
 } from "@react-three/drei";
 import { Spaceship } from "./Spaceship";
 import { Astraunaut } from "./Astraunaut";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
 import * as THREE from "three";
 import { Cable } from "./Cable";
 // import { folder, useControls, button } from "leva";
@@ -41,27 +42,33 @@ export const MyCanvas = ({ cameraRef }: Props) => {
 	// });
 
 	return (
-		<Canvas
-			camera={{
-				position: [
-					4.917552923138996, 0.78516727106426, 0.4485371830479772,
-				],
-				fov: 60,
-			}}
-		>
-			<CameraControls ref={cameraRef} />
-			{/* <color args={["black"]} attach="background" /> */}
-			<Environment preset="city" />
-			<OrbitControls enableZoom={false} />
-			<ambientLight />
-			<Stars />
-			<pointLight position={[1, 2, 3]} intensity={10} />
-			<Float>
-				<Spaceship ref={spaceshipRef} />
-			</Float>
-			<Astraunaut ref={astraunautRef} />
+		<>
+			<Canvas
+				camera={{
+					position: [
+						4.917552923138996, 0.78516727106426, 0.4485371830479772,
+					],
+					fov: 60,
+				}}
+			>
+				<CameraControls ref={cameraRef} />
+				{/* <color args={["black"]} attach="background" /> */}
+				<Environment preset="city" />
+				<OrbitControls enableZoom={false} />
+				<ambientLight />
+				<Stars />
+				<pointLight position={[1, 2, 3]} intensity={10} />
+				<Suspense>
+					<Spaceship ref={spaceshipRef} />
+					<Astraunaut ref={astraunautRef} />
+				</Suspense>
 
-			<Cable spaceshipRef={spaceshipRef} astraunautRef={astraunautRef} />
-		</Canvas>
+				<Cable
+					spaceshipRef={spaceshipRef}
+					astraunautRef={astraunautRef}
+				/>
+			</Canvas>
+			<Loader />
+		</>
 	);
 };

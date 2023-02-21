@@ -10,7 +10,7 @@ export const SideBar = ({ cameraRef }: Props) => {
 		<div className="relative text-white">
 			<div className="absolute top-[30%] left-24">
 				<h1 className="text-white text-5xl">Join the team</h1>
-				<p className="pt-2 text-gray-500">
+				<p className="pt-2 text-gray-500 hidden sm:block">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Suscipit, possimus alias! Nihil veniam molestiae aut
 					provident, iure a laudantium suscipit, neque dignissimos
