@@ -1,6 +1,6 @@
 import { QuadraticBezierLine } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import * as THREE from "three";
 
 type Props = {
@@ -9,6 +9,7 @@ type Props = {
 	v1?: THREE.Vector3;
 	v2?: THREE.Vector3;
 };
+
 export function Cable({
 	spaceshipRef,
 	astraunautRef,
@@ -17,10 +18,6 @@ export function Cable({
 }: Props) {
 	const ref = useRef<any>(null!);
 
-	// useFrame(() => {
-	// 	start = spaceshipRef.current.getWorldPosition(v1);
-	// 	end = astraunautRef.current.getWorldPosition(v2);
-	// });
 	useFrame(() =>
 		ref.current.setPoints(
 			spaceshipRef.current.getWorldPosition(v1),

@@ -12,7 +12,9 @@ import { Astraunaut } from "./Astraunaut";
 import { useRef } from "react";
 import * as THREE from "three";
 import { Cable } from "./Cable";
-const DEG45 = Math.PI / 4;
+
+const position = { x: -1, y: 0, z: 1 };
+const target = { x: -1, y: 0, z: 1 };
 export const MyCanvas = () => {
 	const spaceshipRef = useRef<THREE.Group>(null!);
 	const astraunautRef = useRef<THREE.Mesh>(null!);
@@ -48,11 +50,27 @@ export const MyCanvas = () => {
 			<div className="absolute top-1">
 				<button
 					className="text-green-500 p-2 border"
-					onClick={() => {
-						cameraControlRef.current?.rotate(DEG45, 0, true);
+					onClick={(get) => {
+						cameraControlRef.current?.setLookAt(
+							position.x,
+							position.y,
+							position.z,
+							target.x,
+							target.y,
+							target.z,
+							true
+						);
 					}}
 				>
-					Turn
+					Look
+				</button>
+				<button
+					className="text-green-500 p-2 border"
+					onClick={() => {
+						cameraControlRef.current?.reset(true);
+					}}
+				>
+					Reset
 				</button>
 			</div>
 		</>
