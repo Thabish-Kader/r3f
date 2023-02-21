@@ -2,6 +2,7 @@ import { useGLTF, Float } from "@react-three/drei";
 
 import { GLTFAstraunaut } from "../typings";
 import { forwardRef, useLayoutEffect } from "react";
+import { useThree } from "@react-three/fiber";
 
 export const Astraunaut = forwardRef<THREE.Mesh>((props, ref) => {
 	const { nodes, materials } = useGLTF(
@@ -12,6 +13,7 @@ export const Astraunaut = forwardRef<THREE.Mesh>((props, ref) => {
 			material.roughness = 0;
 		});
 	}, []);
+
 	return (
 		<>
 			<Float speed={3} rotationIntensity={2} floatIntensity={1}>

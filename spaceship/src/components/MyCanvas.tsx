@@ -15,15 +15,24 @@ import { Cable } from "./Cable";
 
 const position = { x: -1, y: 0, z: 1 };
 const target = { x: -1, y: 0, z: 1 };
+
 export const MyCanvas = () => {
 	const spaceshipRef = useRef<THREE.Group>(null!);
 	const astraunautRef = useRef<THREE.Mesh>(null!);
-	const cameraControlRef = useRef<CameraControls | null>(null);
+	const cameraControlsRef = useRef<CameraControls | null>(null);
+
 	// console.log(spaceshipRef.current.position);
 	return (
 		<>
-			<Canvas>
-				<CameraControls ref={cameraControlRef} />
+			<Canvas
+				camera={{
+					position: [
+						4.917552923138996, 0.78516727106426, 0.4485371830479772,
+					],
+					fov: 60,
+				}}
+			>
+				<CameraControls ref={cameraControlsRef} />
 				<color args={["black"]} attach="background" />
 				<Environment preset="city" />
 				<OrbitControls enableZoom={false} />
@@ -50,8 +59,8 @@ export const MyCanvas = () => {
 			<div className="absolute top-1">
 				<button
 					className="text-green-500 p-2 border"
-					onClick={(get) => {
-						cameraControlRef.current?.setLookAt(
+					onClick={() => {
+						cameraControlsRef.current?.setLookAt(
 							position.x,
 							position.y,
 							position.z,
@@ -67,7 +76,12 @@ export const MyCanvas = () => {
 				<button
 					className="text-green-500 p-2 border"
 					onClick={() => {
-						cameraControlRef.current?.reset(true);
+						cameraControlsRef.current?.moveTo(
+							4.917552923138996,
+							0.78516727106426,
+							0.4485371830479772,
+							true
+						);
 					}}
 				>
 					Reset
