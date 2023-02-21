@@ -11,6 +11,7 @@ import { Spaceship } from "./Spaceship";
 import { Astraunaut } from "./Astraunaut";
 import { useRef } from "react";
 import * as THREE from "three";
+import { Cable } from "./Cable";
 const DEG45 = Math.PI / 4;
 export const MyCanvas = () => {
 	const spaceshipRef = useRef<THREE.Group>(null!);
@@ -23,7 +24,7 @@ export const MyCanvas = () => {
 				<CameraControls ref={cameraControlRef} />
 				<color args={["black"]} attach="background" />
 				<Environment preset="city" />
-				<OrbitControls />
+				<OrbitControls enableZoom={false} />
 				<ambientLight />
 				<pointLight position={[1, 2, 3]} intensity={10} />
 				<Float>
@@ -39,7 +40,10 @@ export const MyCanvas = () => {
 					fade
 					speed={3}
 				/>
-				{/* <Cable start={spaceshipRef} end={astraunautRef} /> */}
+				<Cable
+					spaceshipRef={spaceshipRef}
+					astraunautRef={astraunautRef}
+				/>
 			</Canvas>
 			<div className="absolute top-1">
 				<button
