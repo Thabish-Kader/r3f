@@ -22,20 +22,20 @@ export const MyCanvas = () => {
 	const astraunautRef = useRef<THREE.Mesh>(null!);
 	const cameraControlsRef = useRef<CameraControls | null>(null);
 
-	const { vec4 } = useControls({
-		setLookAt: folder({
-			vec4: { value: [1, 2, 3], label: "position" },
-			vec5: { value: [1, 1, 0], label: "target" },
-			"setLookAt(…position, …target)": button((get) =>
-				cameraControlsRef.current?.setLookAt(
-					// @ts-ignore
-					...get("setLookAt.vec4"),
-					...get("setLookAt.vec5"),
-					true
-				)
-			),
-		}),
-	});
+	// const { vec4 } = useControls({
+	// 	setLookAt: folder({
+	// 		vec4: { value: [1, 2, 3], label: "position" },
+	// 		vec5: { value: [1, 1, 0], label: "target" },
+	// 		"setLookAt(…position, …target)": button((get) =>
+	// 			cameraControlsRef.current?.setLookAt(
+	// 				// @ts-ignore
+	// 				...get("setLookAt.vec4"),
+	// 				...get("setLookAt.vec5"),
+	// 				true
+	// 			)
+	// 		),
+	// 	}),
+	// });
 
 	return (
 		<>
@@ -48,7 +48,7 @@ export const MyCanvas = () => {
 				}}
 			>
 				<CameraControls ref={cameraControlsRef} />
-				<color args={["black"]} attach="background" />
+				{/* <color args={["black"]} attach="background" /> */}
 				<Environment preset="city" />
 				<OrbitControls enableZoom={false} />
 				<ambientLight />
@@ -57,15 +57,7 @@ export const MyCanvas = () => {
 					<Spaceship ref={spaceshipRef} />
 				</Float>
 				<Astraunaut ref={astraunautRef} />
-				<Stars
-					radius={100}
-					depth={1}
-					count={5000}
-					factor={7}
-					saturation={0}
-					fade
-					speed={3}
-				/>
+
 				<Cable
 					spaceshipRef={spaceshipRef}
 					astraunautRef={astraunautRef}

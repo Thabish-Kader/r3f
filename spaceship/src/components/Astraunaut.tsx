@@ -21,8 +21,8 @@ export const Astraunaut = forwardRef<THREE.Mesh>((props, ref) => {
 					ref={ref}
 					geometry={nodes.Astronaut_mesh.geometry}
 					material={materials.Astronaut_mat}
-					scale={0.25}
-					position={[1, 2, 0]}
+					scale={0.1}
+					position={[1, 1, 0]}
 					rotation={[0.5, -0.5, -0.5]}
 				/>
 			</Float>
