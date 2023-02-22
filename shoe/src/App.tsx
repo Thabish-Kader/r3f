@@ -4,7 +4,6 @@ import { proxy } from "valtio";
 import { Info } from "./components/Info";
 
 export const store = proxy({
-	current: null,
 	items: {
 		laces: "#ffffff",
 		mesh: "#ffffff",
