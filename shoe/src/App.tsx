@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { MyCanvas } from "./components/MyCanvas";
 import { proxy } from "valtio";
+import { ColorPalete } from "./components/ColorPalete";
 
 export const store = proxy({
 	current: null,
 	items: {
-		laces: "black",
+		laces: "#ffffff",
 		mesh: "#ffffff",
 		caps: "#ffffff",
 		inner: "#ffffff",
@@ -19,7 +20,12 @@ export const store = proxy({
 function App() {
 	return (
 		<div className="h-screen">
-			<MyCanvas />
+			<div className="grid grid-cols-3 h-screen hero-section">
+				<ColorPalete />
+				<div className="col-span-2">
+					<MyCanvas />
+				</div>
+			</div>
 		</div>
 	);
 }

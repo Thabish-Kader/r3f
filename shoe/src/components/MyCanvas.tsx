@@ -3,7 +3,6 @@ import { Shoe } from "./Shoe";
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 
 export const MyCanvas = () => {
-	console.log(window.innerWidth);
 	return (
 		<Canvas shadows>
 			<Environment preset="city" />

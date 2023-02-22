@@ -8,7 +8,7 @@ export const Shoe = () => {
 	const { nodes, materials } = useGLTF("/model/shoe-draco.glb") as GLTFShoe;
 	const { viewport } = useThree();
 	const snap = useSnapshot(store);
-	// TODO: add colors
+
 	return (
 		<group scale={viewport.width / 7}>
 			<Float speed={2} rotationIntensity={1} floatingRange={[0, 0.4]}>
