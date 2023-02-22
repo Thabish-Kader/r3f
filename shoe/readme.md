@@ -13,7 +13,7 @@
 
 [Live Demo](https://r3f-3rmj-thabish-kader.vercel.app//)
 
-Project created to learn valito
+Project created to learn valito (state management)
 
 # Skills Acquired
 
