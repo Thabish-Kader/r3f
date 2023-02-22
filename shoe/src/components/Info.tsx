@@ -2,9 +2,9 @@ import React from "react";
 import { store } from "../App";
 import { ColorPicker } from "./ColorPicker";
 
-export const ColorPalete = () => {
+export const Info = () => {
 	return (
-		<section className="relative">
+		<section className="relative hidden lg:inline">
 			<div className="absolute top-[30%] left-32">
 				<h1 className="text-5xl font-bold text-white tracking-widest">
 					LOREM IPSUM
@@ -19,6 +19,12 @@ export const ColorPalete = () => {
 				</h1>
 				<ColorPicker shoePart={"Lace"} />
 				<ColorPicker shoePart={"Mesh"} />
+				<ColorPicker shoePart={"Caps"} />
+				<ColorPicker shoePart={"Inner"} />
+				<ColorPicker shoePart={"Sole"} />
+				<ColorPicker shoePart={"Stripes"} />
+				<ColorPicker shoePart={"Band"} />
+				<ColorPicker shoePart={"Patch"} />
 			</div>
 		</section>
 	);

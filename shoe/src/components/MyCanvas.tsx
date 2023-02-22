@@ -4,7 +4,7 @@ import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 
 export const MyCanvas = () => {
 	return (
-		<Canvas shadows>
+		<Canvas shadows camera={{ position: [1, 1, 1] }}>
 			<Environment preset="city" />
 			<ContactShadows
 				position={[0, -0.8, 0]}

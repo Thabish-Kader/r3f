@@ -10,7 +10,7 @@ export const Shoe = () => {
 	const snap = useSnapshot(store);
 
 	return (
-		<group scale={viewport.width / 7}>
+		<group scale={viewport.width / 4}>
 			<Float speed={2} rotationIntensity={1} floatingRange={[0, 0.4]}>
 				<mesh
 					receiveShadow

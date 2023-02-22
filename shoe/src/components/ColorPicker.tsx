@@ -3,19 +3,30 @@ import { store } from "../App";
 
 export const ColorPicker = ({ shoePart }: any) => {
 	const changeColor = (color: string) => {
-		if (shoePart === "lace") store.items.laces = color;
 		switch (shoePart) {
 			case "Lace":
 				store.items.laces = color;
 				break;
 			case "Mesh":
 				store.items.mesh = color;
+			case "Caps":
+				store.items.caps = color;
+			case "Inner":
+				store.items.inner = color;
+			case "Sole":
+				store.items.sole = color;
+			case "Stripes":
+				store.items.stripes = color;
+			case "Band":
+				store.items.band = color;
+			case "Patch":
+				store.items.patch = color;
 		}
 	};
 	return (
 		<div>
 			<div className="flex gap-5 mt-2 items-center">
-				<h1 className="text-2xl text-white font-bold w-[90px]">
+				<h1 className="text-lg text-white font-bold w-[90px]">
 					{shoePart}
 				</h1>
 				<span
