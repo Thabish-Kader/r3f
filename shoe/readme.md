@@ -13,7 +13,11 @@
 
 [Live Demo](https://r3f-3rmj-thabish-kader.vercel.app//)
 
-Project created to learn valito (state management)
+<img width="1680" alt="Screenshot 2023-02-22 at 1 29 37 PM" src="https://user-images.githubusercontent.com/76642519/220579148-b83d10cf-2bb4-434d-9271-ceab2ac5446a.png">
+
+<img width="1680" alt="Screenshot 2023-02-22 at 1 24 51 PM" src="https://user-images.githubusercontent.com/76642519/220579160-2dc0534c-0143-4d3f-ac93-00ee07a79526.png">
+
+Project created to learn valito
 
 # Skills Acquired
 
