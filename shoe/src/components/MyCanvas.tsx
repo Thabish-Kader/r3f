@@ -1,6 +1,13 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { Shoe } from "./Shoe";
-import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
+import {
+	ContactShadows,
+	Environment,
+	Loader,
+	OrbitControls,
+} from "@react-three/drei";
+import { Suspense } from "react";
+import { Loading } from "./Loading";
 
 export const MyCanvas = () => {
 	return (
@@ -15,7 +22,9 @@ export const MyCanvas = () => {
 			/>
 			<OrbitControls />
 			{/* <pointLight position={[2, 0, 1]} /> */}
-			<Shoe />
+			<Suspense fallback={<Loading />}>
+				<Shoe />
+			</Suspense>
 		</Canvas>
 	);
 };
