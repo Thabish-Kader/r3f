@@ -10,6 +10,7 @@ import {
 	Stage,
 } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import { Robot } from "./Robot";
 
 export const MyCanvas = () => {
 	return (
@@ -22,7 +23,7 @@ export const MyCanvas = () => {
 			}}
 		>
 			<OrbitControls
-				enableZoom={false}
+				// enableZoom={false}
 				minPolarAngle={-Math.PI * 0.5}
 				maxPolarAngle={Math.PI * 0.5}
 				minAzimuthAngle={0}
@@ -35,13 +36,14 @@ export const MyCanvas = () => {
 				adjustCamera={false}
 			>
 				<Drone />
+				<Robot />
 			</Stage>
 			<EffectComposer>
 				<Bloom luminanceThreshold={1} mipmapBlur={true} />
 			</EffectComposer>
 			<Grid
 				receiveShadow
-				position={[0, -1.7, 0]}
+				position={[0, -2.5, 0]}
 				args={[10.5, 10.5]}
 				cellSize={0.9}
 				fadeDistance={25}
@@ -51,6 +53,7 @@ export const MyCanvas = () => {
 				sectionSize={2.7}
 				sectionThickness={1.4}
 			/>
+
 			<Environment background preset="sunset" blur={1} />
 		</Canvas>
 	);
