@@ -15,7 +15,6 @@ This repository contains React Three Fiber projects, each in its own directory. 
 
 The projects included in this repository are:
 
--   Room: A recreation of three js journey level 1 room.
 -   Spaceship: A simple project to learn camera controls.
 -   Drone: Implemented to learb react postprocessing and mouse controls
 
