@@ -37,7 +37,7 @@ export const MyCanvas = () => {
 				<Drone />
 			</Stage>
 			<EffectComposer>
-				<Bloom luminanceThreshold={1} mipmapBlur />
+				<Bloom luminanceThreshold={1} mipmapBlur={true} />
 			</EffectComposer>
 			<Grid
 				receiveShadow
