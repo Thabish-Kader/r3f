@@ -15,6 +15,12 @@
 
 Project created to learn postprocessing
 
+## Screenshot
+<img width="1667" alt="Screenshot 2023-02-23 at 4 41 58 PM" src="https://user-images.githubusercontent.com/76642519/220909145-f286ab9f-bc60-4e8e-a883-53f52f633ab1.png">
+
+<img width="1680" alt="Screenshot 2023-02-23 at 4 42 07 PM" src="https://user-images.githubusercontent.com/76642519/220909191-f1d8c169-2839-4c75-be83-6c5d586c80fc.png">
+
+
 # Skills Acquired
 
 -   react/postprocessing
