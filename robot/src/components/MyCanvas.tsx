@@ -5,12 +5,15 @@ import {
 	AccumulativeShadows,
 	Environment,
 	Grid,
+	Html,
 	OrbitControls,
 	RandomizedLight,
 	Stage,
 } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { Robot } from "./Robot";
+import { Suspense } from "react";
+import { Loading } from "./Loading";
 
 export const MyCanvas = () => {
 	return (
@@ -18,7 +21,7 @@ export const MyCanvas = () => {
 			shadows
 			camera={{
 				position: [
-					3.4777692809742304, -0.68957799629561, 6.220390193324989,
+					6.909913634975045, 2.198230225266069, -7.993475110578021,
 				],
 			}}
 		>
@@ -35,12 +38,15 @@ export const MyCanvas = () => {
 				shadows={{ type: "accumulative", bias: -0.001 }}
 				adjustCamera={false}
 			>
-				<Drone />
-				<Robot />
+				{/* <Suspense fallback={<Loading />}>
+					<Drone />
+					<Robot />
+				</Suspense> */}
 			</Stage>
 			<EffectComposer>
 				<Bloom luminanceThreshold={1} mipmapBlur={true} />
 			</EffectComposer>
+
 			<Grid
 				receiveShadow
 				position={[0, -2.5, 0]}

@@ -1,14 +1,15 @@
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import { DroneGLTF } from "../typings";
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 
 // https://sketchfab.com/3d-models/robot-cln-r-school-project-9a793a9293fb4ec89936aebfda8fc434
 export const Robot = () => {
 	const { nodes, materials } = useGLTF("/drone.glb") as DroneGLTF;
 
 	const stripe = useRef<THREE.MeshBasicMaterial>(null);
-
+	const { camera } = useThree();
+	console.log(camera.position);
 	useFrame((state, delta) => {
 		const t = (1 + Math.sin(state.clock.elapsedTime * 2)) / 2;
 		stripe.current?.color.setRGB(1 + t * 10, 2, 20 + t * 50);
