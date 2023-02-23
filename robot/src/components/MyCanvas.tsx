@@ -38,10 +38,10 @@ export const MyCanvas = () => {
 				shadows={{ type: "accumulative", bias: -0.001 }}
 				adjustCamera={false}
 			>
-				{/* <Suspense fallback={<Loading />}>
+				<Suspense fallback={<Loading />}>
 					<Drone />
 					<Robot />
-				</Suspense> */}
+				</Suspense>
 			</Stage>
 			<EffectComposer>
 				<Bloom luminanceThreshold={1} mipmapBlur={true} />
