@@ -9,9 +9,21 @@ export const Drone = () => {
 
 	return (
 		<group position-y={-2.5} rotation={[0, -Math.PI * 0.6, 0]}>
-			<mesh geometry={nodes.body001.geometry} material={materials.Body} />
-			<mesh geometry={nodes.head001.geometry} material={materials.Head} />
 			<mesh
+				castShadow
+				receiveShadow
+				geometry={nodes.body001.geometry}
+				material={materials.Body}
+			/>
+			<mesh
+				castShadow
+				receiveShadow
+				geometry={nodes.head001.geometry}
+				material={materials.Head}
+			/>
+			<mesh
+				castShadow
+				receiveShadow
 				geometry={nodes.stripe001.geometry}
 				material={materials.Stripe}
 			/>
