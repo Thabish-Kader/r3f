@@ -16,9 +16,9 @@
 Project created to learn postprocessing
 
 ## Screenshot
-<img width="1667" alt="Screenshot 2023-02-23 at 4 41 58 PM" src="https://user-images.githubusercontent.com/76642519/220909145-f286ab9f-bc60-4e8e-a883-53f52f633ab1.png">
+<img width="1550" alt="Screenshot 2023-02-23 at 7 01 13 PM" src="https://user-images.githubusercontent.com/76642519/220950843-6c978aaa-83a9-4049-a91d-d4ef2d6ce92b.png">
 
-<img width="1680" alt="Screenshot 2023-02-23 at 4 42 07 PM" src="https://user-images.githubusercontent.com/76642519/220909191-f1d8c169-2839-4c75-be83-6c5d586c80fc.png">
+<img width="1553" alt="Screenshot 2023-02-23 at 7 01 05 PM" src="https://user-images.githubusercontent.com/76642519/220950861-4bc66257-a1a6-4a90-b4a3-68b961ed09fd.png">
 
 
 # Skills Acquired
