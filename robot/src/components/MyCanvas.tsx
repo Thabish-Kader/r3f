@@ -9,6 +9,7 @@ import {
 	RandomizedLight,
 	Stage,
 } from "@react-three/drei";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 export const MyCanvas = () => {
 	return (
@@ -35,6 +36,9 @@ export const MyCanvas = () => {
 			>
 				<Drone />
 			</Stage>
+			<EffectComposer>
+				<Bloom luminanceThreshold={1} mipmapBlur />
+			</EffectComposer>
 			<Grid
 				receiveShadow
 				position={[0, -1.7, 0]}
